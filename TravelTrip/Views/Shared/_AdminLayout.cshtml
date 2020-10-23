@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "_AdminLayout";
+    Layout = null;
+}
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+-
+-
+-
+<body>
+   
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Menuler</h3>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a class="w3-bar-item w3-button">Hoşgeldin, @User.Identity.Name</a>
+        }
+
+        <a href="/Admin/Index/" class="w3-bar-item w3-button">Bloglar </a>
+        <a href="/Admin/CommentList/" class="w3-bar-item w3-button">Yorumlar</a>
+        <a href="/Default/Index/" class="w3-bar-item w3-button">Siteye Git</a>
+        <a href="/Login/Logout/" class="w3-bar-item w3-button">Çıkış Yap </a>
+
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container w3-teal">
+            <h4>Admin Paneli</h4>
+        </div>
+
+    
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+

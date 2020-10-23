@@ -1,0 +1,15 @@
+﻿@model TravelTrip.Classes.Comment
+
+<div class="content-form">
+    <h3>Yorum Yapın..</h3>
+    <form method="post">
+       
+        <input type="hidden" name="BlogId" value="@ViewBag.value" />
+
+        <input type="text" name="UserName" placeholder="Kullanıcı Adı" required />
+        <input type="text" name="Mail" placeholder="Email" required />
+
+        <textarea name="Comments" placeholder="Yorum"></textarea>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>

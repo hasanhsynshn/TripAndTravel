@@ -1,0 +1,24 @@
+﻿@model TravelTrip.Classes.Comment
+@{
+    ViewBag.Title = "GetComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("CommentModify", "Admin", FormMethod.Post))
+{
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.CommentId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextAreaFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yorum")
+    @Html.TextAreaFor(x => x.Comments, new { @class = "form-control" })
+
+    <br />
+  
+    <button class="btn btn-primary">Yorum Güncelle</button>
+}

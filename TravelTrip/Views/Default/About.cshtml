@@ -1,0 +1,30 @@
+﻿@model List<TravelTrip.Classes.About>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_T.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>About</h3>
+
+                @foreach (var x in Model)
+                {
+                    <img src="@x.ImageUrl" alt="" />
+                    
+                    <p>  @x.Description</p>
+
+                }
+
+
+            </div>
+        </div>
+    </div>
+
